@@ -15,9 +15,10 @@ cask "proton-pass-cli" do
   homepage "https://protonpass.github.io/pass-cli/"
 
   livecheck do
-    url "https://github.com/protonpass/pass-cli.git"
-    strategy :git do |tags|
-      tags.filter_map { |tag| tag[/^v?(\d+(?:\.\d+)+)$/, 1] }
+    url "https://proton.me/download/pass-cli/versions.json"
+    regex(/^(\d+(?:\.\d+)+)$/)
+    strategy :json do |json, regex|
+      json["passCliVersions"]["version"][regex, 1]
     end
   end
 
