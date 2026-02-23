@@ -29,10 +29,5 @@ cask "proton-pass-cli" do
     "~/Library/Application Support/proton-pass-cli",
   ]
 
-  caveats <<~EOS
-    The Proton Pass CLI has been installed as `pass-cli`.
-
-    To get started:
-      pass-cli login
-  EOS
+  caveats "Proton Pass CLI has been installed as `pass-cli`."
 end
