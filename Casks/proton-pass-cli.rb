@@ -9,16 +9,15 @@ cask "proton-pass-cli" do
          x86_64_linux: "b6e02ac79cee277767023dda21b6cea276d56fdb0bf85d96eaf022ff6227debc"
 
   url "https://proton.me/download/pass-cli/#{version}/pass-cli-#{os}-#{arch}",
-      verified: "proton.me"
+      verified: "proton.me/"
   name "Proton Pass CLI"
   desc "Command-line interface for Proton Pass"
   homepage "https://protonpass.github.io/pass-cli/"
 
   livecheck do
     url "https://proton.me/download/pass-cli/versions.json"
-    regex(/^(\d+(?:\.\d+)+)$/)
-    strategy :json do |json, regex|
-      json["passCliVersions"]["version"][regex, 1]
+    strategy :json do |json|
+      json["passCliVersions"]["version"]
     end
   end
 
