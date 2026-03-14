@@ -27,6 +27,4 @@ cask "proton-pass-cli" do
     "~/.local/share/proton-pass-cli",
     "~/Library/Application Support/proton-pass-cli",
   ]
-
-  caveats "Proton Pass CLI has been installed as `pass-cli`."
 end
