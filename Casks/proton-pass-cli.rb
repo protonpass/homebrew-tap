@@ -21,7 +21,9 @@ cask "proton-pass-cli" do
     end
   end
 
-  binary "pass-cli-#{os}-#{arch}", target: "pass-cli"
+  rename "pass-cli-#{os}-#{arch}", "pass-cli"
+
+  binary "pass-cli"
 
   zap trash: [
     "~/.local/share/proton-pass-cli",
