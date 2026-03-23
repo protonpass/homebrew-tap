@@ -1,13 +1,13 @@
 class PassCli < Formula
   desc "Proton Pass CLI - Command-line interface for Proton Pass"
   homepage "https://proton.me/pass"
-  version "1.7.0"
+  version "1.8.0"
   license "GPL-3.0"
 
   on_macos do
     on_intel do
-      url "https://proton.me/download/pass-cli/1.7.0/pass-cli-macos-x86_64"
-      sha256 "f3f16f1a05bd998fd2b1b044eac6ff173652189e8596dd83c0df7a7b1df0bb7d"
+      url "https://proton.me/download/pass-cli/1.8.0/pass-cli-macos-x86_64"
+      sha256 "7fc3f43efe035093e5705e2a3e6aa52c41c57d16242ebc663c881a9141586659"
 
       def install
         bin.install "pass-cli-macos-x86_64" => "pass-cli"
@@ -15,8 +15,8 @@ class PassCli < Formula
     end
 
     on_arm do
-      url "https://proton.me/download/pass-cli/1.7.0/pass-cli-macos-aarch64"
-      sha256 "7c831780283bc1529641b04f685fb64a03252393b796bfbfe62e0e8c2426595e"
+      url "https://proton.me/download/pass-cli/1.8.0/pass-cli-macos-aarch64"
+      sha256 "ea4158edc2cdff109ecf869ea6b5781e594fc714c40a25768c8e3be62cecac8f"
 
       def install
         bin.install "pass-cli-macos-aarch64" => "pass-cli"
