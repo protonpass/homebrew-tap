@@ -25,6 +25,7 @@ cask "proton-pass-cli" do
 
   zap trash: [
     "~/.local/share/proton-pass-cli",
+    "~/.ssh/proton-pass-agent.*",
     "~/Library/Application Support/proton-pass-cli",
   ]
 end
